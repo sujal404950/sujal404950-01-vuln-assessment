@@ -1,0 +1,73 @@
+{
+  "target": "192.168.56.101",
+  "scan_time": "2026-08-07T07:19:27",
+  "hosts": [
+    {
+      "ip": "192.168.56.101",
+      "state": "up",
+      "open_ports": [
+        {
+          "port": 21,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "ftp",
+          "banner": "vsftpd 2.3.4",
+          "vulnerabilities": [
+            {
+              "match": "vsftpd 2.3.4",
+              "cve": "CVE-2011-2523",
+              "severity": "Critical",
+              "description": "vsftpd 2.3.4 contains a backdoor triggered by a ':)' smiley in the username, giving a remote root shell."
+            }
+          ]
+        },
+        {
+          "port": 22,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "ssh",
+          "banner": "OpenSSH 4.7p1",
+          "vulnerabilities": [
+            {
+              "match": "OpenSSH 4.7",
+              "cve": "CVE-2008-5161",
+              "severity": "Medium",
+              "description": "Older OpenSSH versions are vulnerable to a CBC plaintext recovery attack under certain configurations."
+            }
+          ]
+        },
+        {
+          "port": 80,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "http",
+          "banner": "Apache httpd 2.2.8",
+          "vulnerabilities": []
+        },
+        {
+          "port": 139,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "netbios-ssn",
+          "banner": "Samba smbd 3.0.20",
+          "vulnerabilities": []
+        },
+        {
+          "port": 3306,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "mysql",
+          "banner": "MySQL 5.0.51a",
+          "vulnerabilities": [
+            {
+              "match": "MySQL 5.0",
+              "cve": "CVE-2012-2122",
+              "severity": "High",
+              "description": "Authentication bypass allowing repeated login attempts to eventually succeed due to a memcmp() flaw."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
